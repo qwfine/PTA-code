@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+	int i, j, N, counter = 0, m = 3;
+	scanf("%d", &N);
+
+	if (N < 100000)
+	{
+		for (i = 5; i <= N; i += 2)
+		{
+			for (j = 2; j <= sqrt(i); j++)
+			{
+				if (i % j == 0)
+					break;
+			}
+			if (j > sqrt(i))
+			{
+				if (i - m == 2)
+					counter++;
+				m = i;
+			}
+			
+			
+		}
+		printf("%d", counter);
+	}
+	else
+	return 0;
+}
+//7-4 素数对猜想
